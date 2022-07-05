@@ -327,7 +327,7 @@ class Aggregate implements Executable, Explainable
             'pipeline' => $this->pipeline,
         ];
 
-        foreach (['allowDiskUse', 'bypassDocumentValidation', 'comment', 'explain', 'maxTimeMS'] as $option) {
+        foreach (['allowDiskUse', 'bypassDocumentValidation', 'comment', 'explain', 'maxTimeMS', 'writeConcern'] as $option) {
             if (isset($this->options[$option])) {
                 $cmd[$option] = $this->options[$option];
             }

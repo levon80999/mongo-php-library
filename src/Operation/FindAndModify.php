@@ -302,7 +302,7 @@ class FindAndModify implements Executable, Explainable
                 : (object) $this->options['update'];
         }
 
-        foreach (['arrayFilters', 'bypassDocumentValidation', 'comment', 'hint', 'maxTimeMS'] as $option) {
+        foreach (['arrayFilters', 'bypassDocumentValidation', 'comment', 'hint', 'maxTimeMS', 'writeConcern'] as $option) {
             if (isset($this->options[$option])) {
                 $cmd[$option] = $this->options[$option];
             }
