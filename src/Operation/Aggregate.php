@@ -322,7 +322,7 @@ class Aggregate implements Executable, Explainable
             'pipeline' => $this->pipeline,
         ];
 
-        foreach (['allowDiskUse', 'bypassDocumentValidation', 'comment', 'explain', 'maxTimeMS', 'writeConcern'] as $option) {
+        foreach (['allowDiskUse', 'bypassDocumentValidation', 'comment', 'explain', 'maxTimeMS'] as $option) {
             if (isset($this->options[$option])) {
                 $cmd[$option] = $this->options[$option];
             }
@@ -369,7 +369,7 @@ class Aggregate implements Executable, Explainable
     {
         $options = [];
 
-        foreach (['readConcern', 'readPreference', 'session'] as $option) {
+        foreach (['readConcern', 'readPreference', 'session', 'writeConcern'] as $option) {
             if (isset($this->options[$option])) {
                 $options[$option] = $this->options[$option];
             }
